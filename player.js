@@ -1,4 +1,5 @@
 import SecretWord from "./secretWord.js"
+const fs = require('fs');
 SecretWord
 export default class Player{
 
@@ -14,7 +15,13 @@ export default class Player{
           console.log( "Congratulation! You gussed a correct Letter! Win!" )
         }
       else {
-          console.log( "Faild: try again!" )
+//create highScore list
+const initialHighScores = [
+  { name: 'P1', score: 1000 },
+  { name: '2', score: 800 },
+  { name: 'P3', score: 600 },
+  {name: 'P4' , score: 200}	
+]
           gallowSlots()
         }
       }
