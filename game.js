@@ -12,8 +12,8 @@ export default class Game{
     console.log( "Welcome to the Hangman game! start the gane:" )
     let player = new Player()
     let highScoreList = new Scores()
-    let word = new Question( "Type the secret word: " )
-    word = []
+    let question = new Question()
+    let word = prompt( "Type the secret word: " )
     new SecretWord()
     console.log( "The secret word has " + word.length )
     let gallow = new Gallow()
