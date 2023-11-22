@@ -1,5 +1,5 @@
 import fs from 'fs';
-export default class HighScoreList {
+export default class Scores {
   constructor () {
     this.highScores = this.highScoresList()
   }
