@@ -14,7 +14,7 @@ export default class HighScoreList {
   }
   saveHighScores () {
     try {
-      const data = JSON.stringify( this.highScoresList, null, 2 )
+      const data = JSON.stringify( this.highScores, null, 2 )
       fs.writeFileSync( 'high_scores.txt', data )
       console.log( 'High score-list saved' )
     } catch ( err ) {
@@ -24,9 +24,6 @@ export default class HighScoreList {
   updateHighScoresList ( playerName, score ) {
     this.highScoresList.push( { name: playerName, score: score } )
     this.highScoresList.sort( ( a, b ) => b.score - a.score )
-    this.saveHighScores(); 
+    this.saveHighScores();
   }
 }
-saveHighScores()
-
-
