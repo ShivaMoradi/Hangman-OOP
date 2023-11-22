@@ -1,16 +1,14 @@
 import Question from "./question.js"
 
-
-Question
-
+new Question()
 export default class SecretWord {
   constructor ( word ) {
+      word =[]
     if ( word && word.length > 0 ) {
       this.word = new Array( word.length ).fill( "-" )
+      return this.word.length;
     } 
   }
 
-  get length () {
-    return this.word.length;
-  }
+
 }
