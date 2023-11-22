@@ -1,5 +1,4 @@
-const fs = require( 'fs' );
-
+import fs from 'fs';
 export default class HighScoreList {
   constructor () {
     this.highScores = this.highScoresList()
@@ -28,6 +27,6 @@ export default class HighScoreList {
     this.saveHighScores(); 
   }
 }
-saveInitialHighScores()
+saveHighScores()
 
 
