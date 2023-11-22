@@ -1,4 +1,4 @@
-import SecretWord from "./secretWord.js"
+import SecretWord from "./secretWord.js";
 import HighScoreList from "./highScoreList.js";
 const fs = require('fs');
 SecretWord

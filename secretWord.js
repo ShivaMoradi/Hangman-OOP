@@ -6,9 +6,9 @@ Question
 export default class SecretWord {
   constructor ( word ) {
     if ( word && word.length > 0 ) {
-      this.word = new Array( word.length ).fill( "-" );
+      this.word = new Array( word.length ).fill( "-" )
     } else {
-      throw new Error( "no word added or no valid word" );
+      throw new Error( "no word added or no valid word" )
     }
   }
 
