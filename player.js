@@ -1,6 +1,8 @@
 import SecretWord from "./secretWord.js"
+import HighScoreList from "./highScoreList.js";
 const fs = require('fs');
 SecretWord
+HighScoreList
 export default class Player{
 
   // guss the char
@@ -16,9 +18,9 @@ export default class Player{
         }
       else {
 //create highScore list
-const initialHighScores = [
+const highScoresList= [
   { name: 'P1', score: 1000 },
-  { name: '2', score: 800 },
+  { name: 'P2', score: 800 },
   { name: 'P3', score: 600 },
   {name: 'P4' , score: 200}	
 ]
