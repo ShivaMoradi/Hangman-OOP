@@ -6,8 +6,6 @@ import Module from "node:module";
 import HighScoreList from "./highScoreList.js";
 const require = Module.createRequire( import.meta.url );
 const prompt = require( 'prompt-sync' )( { sigint: true } );
-const fs = require( 'fs' );
-
 export default class Game{
 
   constructor () {
