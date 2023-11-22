@@ -1,7 +1,7 @@
 import SecretWord from "./secretWord.js";
-import HighScoreList from "./highScoreList.js";
+import Scores from "./highScoreList.js";
 SecretWord
-HighScoreList
+Scores
 export default class Player{
 
   // guss the char
