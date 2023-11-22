@@ -8,7 +8,7 @@ export default class SecretWord {
     if ( word && word.length > 0 ) {
       this.word = new Array( word.length ).fill( "-" );
     } else {
-      throw new Error( "Inget ord angivet eller ogiltigt ord." );
+      throw new Error( "no word added or no valid word" );
     }
   }
 
