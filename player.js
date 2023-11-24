@@ -1,31 +1,33 @@
 import SecretWord from "./secretWord.js";
+import Gallow from "./gallow.js";
 import Scores from "./highScoreList.js";
-SecretWord
-Scores
 export default class Player{
-
-  // guss the char
-  // if the word include gussed char, (loop ) to guss next char untill word or gallow are complete
-  //if the char isn't in word then go to the gallow
+  constructor () {
+    // guss the char
+    // if the word include gussed char, (loop ) to guss next char untill word or gallow are complete
+    //if the char isn't in word then go to the gallow
+    this.playerGussChar()
+  }  
   
-  playerGussChar ( SecretWordInstance, char ) {
-    if ( SecretWordInstance.word.includes( char ) ) {
-      for ( let i = 0; i < SecretWordInstance.word.length; i++ ) {
-        if ( SecretWordInstance.word[ i ] === char ) {
-          SecretWordInstance.word[ i ] = char
-          console.log( "Congratulation! You gussed a correct Letter! Win!" )
-        }
-      else {
-//create highScore list
-const highScoresList= [
-  { name: 'P1', score: 1000 },
-  { name: 'P2', score: 800 },
-  { name: 'P3', score: 600 },
-  {name: 'P4' , score: 200}	
-]
-          gallowSlots()
-        }
+  playerGussChar ( word, char ) {
+    new SecretWord()
+
+  if ( word.includes( char ) ) {
+    for ( let i = 0; i < word.length; i++ ) {
+      if ( word[ i ] === char ) {
+        word[ i ] = char
+        console.log( "Congratulation! You gussed a correct Letter! Win!" )
       }
-    }
+      else {
+        new Scores()
+        this.wordLength
+        new Gallow()
+      }
+     
+      }
+  }
+  console.log( "play again" )
+
   }
 }
+
