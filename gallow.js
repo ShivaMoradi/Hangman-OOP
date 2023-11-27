@@ -1,3 +1,4 @@
+
 export default class Gallow {
 
   // create a step by step gallow for the Hangman game
