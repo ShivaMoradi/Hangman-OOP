@@ -3,7 +3,9 @@ import Gallow from "./gallow.js";
 import Scores from "./highScoreList.js";
 import Game from "./game.js";
 import Question from "./question.js";
-export default class Player{
+
+let word =[]
+export default class Player {
   constructor ( playerName, score ) {
     this.playerName = playerName
     this.score = score
@@ -11,28 +13,33 @@ export default class Player{
     // if the word include gussed char, (loop ) to guss next char untill word or gallow are complete
     //if the char isn't in word then go to the gallow
     this.playerGussChar()
-  }  
+    new Question()
+  }
   playerGussChar () {
-    new SecretWord ()
-    let char = new Question().word
-    console.log("you gussed: " + char)
-    if ( answer.includes( char ) ) {
+    this.gusschar()
+    console.log( "you gussed: " + char )
+    if ( word.question.includes( char ) ) {
       for ( let i = 0; i < wordLength; i++ ) {
-        this.word[ i ] = char
-          console.log( "Congratulation! You gussed a correct Letters! Win!" )
+        word[ i ] = char
+        console.log( "Congratulation! You gussed a correct Letters! Win!" )
       }
     }
     else {
-      for (wordLength of word){
+      new SecretWord()
+      for ( wordLength of word.secretWord ) {
         let gallow = new Gallow()
       }
        
-      }
-   let score = new Scores()
+    }
+    let score = new Scores()
     console.log( "play again" )
     this.game = new Game()
   }
-    }
-   
-
-
+  gusschar () {
+    this.promptWord.toUpperCase
+  }
+  
+  promptWord () {
+    let char = prompt( "Guss a char: " )
+  }
+}
