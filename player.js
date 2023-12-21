@@ -1,7 +1,6 @@
 
 import Gallow from "./gallow.js";
 import PromptSync from "prompt-sync";
-import word from "./game.js";
 const prompt = PromptSync();
 
 export default class Player {
