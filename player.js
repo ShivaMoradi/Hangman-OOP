@@ -1,6 +1,7 @@
 
 import Gallow from "./gallow.js";
 import PromptSync from "prompt-sync";
+import word from "./game.js";
 const prompt = PromptSync();
 
 export default class Player {
@@ -14,11 +15,12 @@ this.playerGussChar()
   }
   playerGussChar () {
     Gallow;
-
     let char = prompt( "Guss a char: " )
     console.log( "you gussed: " + char )
     
-  }
+    }
+    
+  
  
 
 }

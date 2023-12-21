@@ -13,23 +13,23 @@ export default async function Game () {
   let secretWord = await wordLength()
   console.log( "The secret word has " + secretWord )
 
-  let char = new playerGussChar()
-  if ( word.includes( char ) ) {
 
-    for ( let i = 0; i < word.length; i++ ) {
+  for ( let i = 0; i < word.length; i++ ) {
+    let char = new playerGussChar()
+  }
+    if ( word.includes( char ) ) {
       let gussedWord = char
       return gussedWord;
-    }
-    console.log( "Congratulation! You gussed a correct Letters! Win!" + gussedWord)
+     // console.log( "Congratulation! You gussed a correct Letters! Win!" + gussedWord )
 
-  }
+    }
+
   else {
-    let slot = new gallowSlots()
-    for ( let i = 0; i <word.length; i++ ) {
+      let slot = new gallowSlots()
       return slot;
-
     }
-    console.log( "Game Over!"  + gallow.slot())
+    
+    //console.log( "Game Over!"  + gallow.slot())
 
 
   }
@@ -38,7 +38,7 @@ export default async function Game () {
 
 
   //new Scores()
-}
+
 
 
 
