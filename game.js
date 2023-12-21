@@ -9,13 +9,13 @@ import Gallow from "./gallow.js";
 
 
 export default async function Game () {
-  let word = await promptWord()
+  let theWord = await promptWord()
   let secretWord = await wordLength()
   console.log( "The secret word has " + secretWord )
   Gallow;
   slot;
 
-  for ( let i = 0; i < word.length; i++ ) {
+  for ( let i = 0; i < theWord.length; i++ ) {
     // Display current state of guessed word or gallow slots
     let char = []
      char = new playerGussChar()
@@ -23,13 +23,13 @@ export default async function Game () {
    // console.log( "Guessed Word: " + gussedWord );
     //console.log( "Gallow Slots: " + gallow.gallowSlots );
 
-      if ( word.includes( char ) ) {
+      if ( theWord.includes( char ) ) {
         gussedWord += char
         console.log( "Correct guess! Guessed Word: " + gussedWord );
       } else {
-        let gallowSlots= new Gallow()
+
         slot [i] = slot[i] + 1; 
-        console.log( "Incorrect guess! Gallow Slots: " + gallowSlots );
+        console.log( "Incorrect guess! Gallow Slots: " + slot[i] );
     }
   }
   console.log( "Game Over!" );

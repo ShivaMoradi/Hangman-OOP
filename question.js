@@ -12,7 +12,9 @@ export default function promptWord () {
   }
 
   word = prompt( "Enter a word: " );
-  return word;
+  let theWord = []
+  theWord = word
+  return theWord;
 }
 
 
