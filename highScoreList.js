@@ -11,8 +11,8 @@ export default class Scores {
   }
   calculateScore ( yourScore ) {
     playerGussChar();
-    const yourScore = this.gussedWord.length
-     return ScoresList[i] = [playerName,yourScore]
+     yourScore = this.gussedWord.length
+     return ScoresList = [playerName,yourScore]
   }
   ScoresList () {
     try {
