@@ -10,9 +10,9 @@ export default class Scores {
     this.updateScoresList()
   }
   calculateScore ( yourScore ) {
+    playerGussChar();
     const yourScore = this.gussedWord.length
-    
-    ScoresList[i] = yourScore
+     return ScoresList[i] = [playerName,yourScore]
   }
   ScoresList () {
     try {
@@ -20,7 +20,7 @@ export default class Scores {
       return JSON.parse( data )
     } catch ( err ) {
       console.log( 'no previous high score-list found' )
-      return [];
+      return  data;
     }
   }
   saveScores () {

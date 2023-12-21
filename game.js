@@ -3,23 +3,24 @@ import Module from "node:module";
 const require = Module.createRequire( import.meta.url );
 import promptWord from "./question.js";
 import wordLength from "./secretWord.js";
+import playerGussChar from "./player.js";
 import Player from "./player.js";
 
 
 export default async function Game () {
   let word = await promptWord()
-    let secretWord = wordLength()
+  let secretWord = await wordLength()
   console.log( "The secret word has " + secretWord )
 
-  this.Player = new Player()
-  
-   //new Scores()
-  }
-  
+  let char = new playerGussChar()
+  console.log(Player)
+
+  //new Scores()
+}
 
 
 
-  
-    
-   
-  
+
+
+
+
