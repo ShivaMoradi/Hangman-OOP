@@ -1,11 +1,18 @@
 import fs from 'fs';
+import playerGussChar from './player.js'
 //create Score list
+let ScoresList=["",""]
 export default class Scores {
   constructor () {
     this.calculateScore()
     this.ScoresList()
     this.saveScores()
     this.updateScoresList()
+  }
+  calculateScore ( yourScore ) {
+    const yourScore = this.gussedWord.length
+    
+    ScoresList[i] = yourScore
   }
   ScoresList () {
     try {
@@ -31,9 +38,6 @@ export default class Scores {
     this.ScoresList.sort( ( a, b ) => b.score - a.score )
     this.saveScores()
   }
-  calculateScore ( yourScore ) {
-    yourScore = this.word[ i ].length
-    this.saveScores()
-  }
+  
 
 }

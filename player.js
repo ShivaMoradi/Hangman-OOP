@@ -1,10 +1,8 @@
-//import SecretWord from "./secretWord.js";
+import SecretWord from "./secretWord.js";
 import promptWord from "./question.js";
 import Gallow from "./gallow.js";
-import Scores from "./highScoreList.js";
 import PromptSync from "prompt-sync";
 const prompt = PromptSync();
-let word = []
 
 export default class Player {
   constructor ( playerName, score ) {
@@ -15,24 +13,28 @@ export default class Player {
     //if the char isn't in word then go to the gallow
   }
   playerGussChar () {
+    Gallow;
+    
     let char = prompt( "Guss a char: " )
     console.log( "you gussed: " + char )
     if ( promptWord.includes( char ) ) {
-      for ( let i = 0; i < word.length; i++ ) {
-        this.word[ i ] = char
+      for ( let i = 0; i < SecretWord.length; i++ ) {
+        gussedWord[ i ] = char
+        return gussedWord;
       }
-      console.log( "Congratulation! You gussed a correct Letters! Win!" + word )
+      console.log( "Congratulation! You gussed a correct Letters! Win!" + gussedWord )
 
     }
     else {
-      for ( let i = 0; i < this.word.length; i++ ) {
-        this.gallow = new Gallow()
+      for ( let i = 0; i < this.SecretWord.length; i++ ) {
+        console.log( this.gallow.slot() )      
+       
       }
+      console.log( "Game Over!")
+
 
     }
-    let score = new Scores()
-    console.log( "play again" )
-    this.game = new Game()
+  
   }
  
 
