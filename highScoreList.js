@@ -32,7 +32,6 @@ export default class Scores {
     this.saveScores()
   }
   calculateScore ( yourScore ) {
-    new Player()
     yourScore = this.word[ i ].length
     this.saveScores()
   }
