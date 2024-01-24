@@ -1,7 +1,9 @@
 import fs from 'fs';
-//create Score list
+import calculateScore from "./player.js";
+const ScoresList =["", ]
 export default class Score {
   constructor () {
+    let myScore = new calculateScore()
     this.ScoresList()
     this.saveScores()
     this.updateScoresList()
@@ -21,7 +23,7 @@ export default class Score {
       const data = JSON.stringify( this.ScoresList, null, 2 )
       fs.writeFileSync( 'Score_list.csv', data )
       console.log( 'Score-list saved' )
-      console.log( "Player score is ", yourScore )
+      console.log( "Player score is ", this.myScore )
     } catch ( err ) {
       console.error( 'Something is wrong! Saving failed', err )
     }
