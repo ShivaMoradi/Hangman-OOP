@@ -16,22 +16,3 @@ export default function promptWord () {
   theWord = word
   return theWord;
 }
-
-
-
-
-
-
-
-
-/*import PromptSync from "prompt-sync"
-
-const prompt = PromptSync()
-
-export default function promptWord () {
-  console.log( "Prompting for word..." ); // Add log here
-
-  const word = prompt( "Type the secret word: " )
-  return word
-}
-*/

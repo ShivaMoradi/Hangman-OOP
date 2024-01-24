@@ -1,6 +1,6 @@
 import Module from "node:module";
 const require = Module.createRequire( import.meta.url );
-import promptWord from "./question.js";
+//import promptWord from "./question.js";
 import wordLength from "./secretWord.js";
 import playerGussChar from "./player.js";
 //import ScoresList from "./highScoreList.js"
@@ -9,20 +9,19 @@ import Gallow from "./gallow.js";
 
 
 export default async function Game () {
-  let theWord = await promptWord()
   let secretWord = await wordLength()
-  console.log( "The secret word has " + secretWord )
   Gallow;
   slot;
 
-  for ( let i = 0; i < theWord.length; i++ ) {
+  //for ( let i = 0; i < theWord.length; i++ ) {
     // Display current state of guessed word or gallow slots
-    let char = []
-     char = new playerGussChar()
-    let gussedWord = char
-   // console.log( "Guessed Word: " + gussedWord );
-    //console.log( "Gallow Slots: " + gallow.gallowSlots );
+  
+  let gussedWord = new playerGussChar()
 
+
+   // let gussedWord = gussedChar
+    //console.log( "Gallow Slots: " + gallow.gallowSlots );
+/*
       if ( theWord.includes( char ) ) {
         gussedWord += char
         console.log( "Correct guess! Guessed Word: " + gussedWord );
@@ -30,15 +29,8 @@ export default async function Game () {
 
         slot [i] = slot[i] + 1; 
         console.log( "Incorrect guess! Gallow Slots: " + slot[i] );
-    }
-  }
-  console.log( "Game Over!" );
+    }*/
+  //}
+
+  //console.log( "Game Over!" );
 }
-
-
-
-
-
-
-
-
