@@ -1,32 +1,25 @@
 import fs from 'fs';
-import playerGussChar from './player.js'
 //create Score list
-let ScoresList=["",""]
-export default class Scores {
+export default class Score {
   constructor () {
-    this.calculateScore()
     this.ScoresList()
     this.saveScores()
     this.updateScoresList()
   }
-  calculateScore ( yourScore ) {
-    playerGussChar();
-     yourScore = this.gussedWord.length
-     return ScoresList = [playerName,yourScore]
-  }
-  ScoresList () {
+  
+  readScoresListFile () {
     try {
-      const data = fs.readFileSync( 'scores-list.txt', 'utf8' )
+      const data = fs.readFileSync( 'Score_list.csv', 'utf8' )
       return JSON.parse( data )
     } catch ( err ) {
       console.log( 'no previous high score-list found' )
-      return  data;
+      return  [];
     }
   }
   saveScores () {
     try {
       const data = JSON.stringify( this.ScoresList, null, 2 )
-      fs.writeFileSync( 'Scores-list.txt', data )
+      fs.writeFileSync( 'Score_list.csv', data )
       console.log( 'Score-list saved' )
       console.log( "Player score is ", yourScore )
     } catch ( err ) {
@@ -34,10 +27,11 @@ export default class Scores {
     }
   }
   updateScoresList ( playerName, score ) {
-    this.ScoresList.push( { name: playerName, score: score } )
+    this.ScoresList.push( { playerName, score } )
     this.ScoresList.sort( ( a, b ) => b.score - a.score )
-    this.saveScores()
+    this.saveScores( ScoresList )
   }
+   
   
 
 }

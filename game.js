@@ -3,7 +3,6 @@ const require = Module.createRequire( import.meta.url );
 //import promptWord from "./question.js";
 import wordLength from "./secretWord.js";
 import playerGussChar from "./player.js";
-//import ScoresList from "./highScoreList.js"
 import slot from "./gallow.js";
 import Gallow from "./gallow.js";
 
