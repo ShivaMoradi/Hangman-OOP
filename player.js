@@ -16,7 +16,8 @@ export default class Player {
     const theWord = promptWord()
     const gallow = new Gallow()
 
-    while ( true ) {
+    for ( let i = 0; i < theWord.length; i++ ) {
+   
       const char = prompt( "Guess a char: " )
 
       if ( char.length !== 1 ) {
@@ -28,13 +29,14 @@ export default class Player {
       if ( theWord.includes( char ) ) {
         this.gussedChar.push( char )
       } else {
-        console.log( "Incorrect guess! Gallow Slots: " + gallow.gallowSlots() )
+          console.log( "Incorrect guess! Gallow Slots: " + gallow.gallowSlots() )
+        
       }
 
       if ( this.gussedChar.length === theWord.length ) {
         console.log( "Congratulations! You guessed the word: " + this.gussedChar.join( "" ) )
-        break;
+      }
       }
     }
   }
-}
+
