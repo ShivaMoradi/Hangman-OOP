@@ -2,15 +2,25 @@ import Module from "node:module";
 const require = Module.createRequire( import.meta.url );
 //import promptWord from "./question.js";
 import wordLength from "./secretWord.js";
-import Player from "./player.js";
+import playerGussChar from "./player.js";
+import Score from "./highScoreList.js";
 
 
 
-export default async function Game () {
-  let secretWord = await wordLength()
-  //let gussedWord = new playerGussChar()
-  let player = new Player()
-  await player.playerGussChar()
+export default class Game {
+  constructor () {
+    this.runGame()
+  }
+  
+  async runGame () {
+    let secretWord = await wordLength()
+    let gussedWord = new playerGussChar()
+    
+    //let save_list = new saveScores()
 
 
-}
+    
+    }
+
+    }
+
