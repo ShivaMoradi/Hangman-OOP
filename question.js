@@ -1,4 +1,3 @@
-//question.js
 import PromptSync from "prompt-sync";
 const prompt = PromptSync();
 
@@ -11,8 +10,8 @@ export default function promptWord () {
     return word; // Return the stored word if already prompted
   }
 
-  word = prompt( "Enter a word: " );
+  word = prompt( "Enter a word: " )
   let theWord = []
   theWord = word
-  return theWord;
+  return theWord
 }
