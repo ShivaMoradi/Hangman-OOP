@@ -4,7 +4,7 @@ import { json } from 'express';
 export default class Score {
   constructor ( playerName, score) {
     this.playerName = playerName
-    
+
     this.score = score
     this.ScoresList = this.readScoresListFile();
 
@@ -24,7 +24,7 @@ export default class Score {
 
     try {
       this.ScoresList.push( { playerName: this.playerName, score: this.score } )
-      fs.writeFileSync( 'Score_list.txt', JSON.stringify( this.ScoresList ) )
+      fs.writeFileSync( 'Score_list.txt', JSON.stringify( this.ScoresList, null, 2 ) )
       
         console.log( 'Score-list saved successfully!' )
     }

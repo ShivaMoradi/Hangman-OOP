@@ -70,5 +70,17 @@ export default class Player {
     const playerName = this.playerName
     console.log( "Your score is: " + score + ", " + playerName )
   }
+ /* playAgain () {
+    let play = prompt( "Do you want to play again?: y/n" )
+    if ( play === "y" ) {
+      this.playerGussChar
+    }
+    else {
+      console.log( "Exit!" )
+    }
+  }*/
+
   }
+  
+  
   
