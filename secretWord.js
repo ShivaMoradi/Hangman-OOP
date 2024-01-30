@@ -6,7 +6,7 @@ export default async function wordLength() {
     if ( word && word.length > 0 ) {
       let secretWord = new Array( word.length ).fill( "-" )
       console.log( "The secret word has " + secretWord )
-
   }
+  
+}
 
-  }

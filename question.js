@@ -15,3 +15,4 @@ export default function promptWord () {
   theWord = word
   return theWord
 }
+
